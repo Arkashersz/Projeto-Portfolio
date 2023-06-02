@@ -1,0 +1,671 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #000;
+    max-width: 2000px;
+    margin: 0 auto;
+
+}
+
+/* HEADER */
+header {
+    background-color: #000;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header h1 {
+    color: #ff4d05;
+    font-size: 2.5rem;
+}
+
+header span {
+    color: #fff;
+}
+
+
+
+header .navegacao-primaria {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+header .navegacao-primaria li a {
+    color: #fff;
+    width: 0px;
+    height: 0px;
+    font-size: 1.3rem;    
+}
+
+header .navegacao-primaria li a::after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    display: block;
+    border-bottom: 4px solid transparent;
+    transition: .6s;
+}
+
+header .navegacao-primaria li a:hover::after {
+    width: 100%;
+    height: 0px;
+    padding: 0px;
+    border-bottom: 4px solid #ff4d05;
+}
+
+
+/* SEÇÃO DOWNLOAD CV */
+.section-div {
+    animation: inicializar .8s forwards;
+    background-color: #000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    align-items: center;
+    gap: 60px;
+    padding: 60px;
+}
+
+.section-div div {
+    margin-top: 120px;
+    align-self: start;
+    display: grid;
+    gap: 30px;
+}
+
+.section-div div h2 {
+    font-family: 'Poppins';
+    font-weight: 600;
+    color: #f7f7f7;
+}
+
+
+.section-div div p {
+    font-family: 'Poppins';
+    font-weight: 200;
+    color: #f7f7f7;
+}
+
+.section-div div a {
+    justify-self: start;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+.section-div img {
+    max-width: 100%;
+}
+
+.digitando::after {
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: piscar .5s infinite;
+}
+
+@keyframes piscar {
+    from {
+        opacity: 1;        
+    }
+    to {
+        opacity: 0;        
+    }
+}
+
+@keyframes inicializar {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+/* PRINCIPAL SOBRE MIM */
+main {
+    background-color: #111;
+}
+
+main .sobre {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    justify-content: center;
+    padding: 40px;
+}
+
+.sobre_titulo {
+    margin: 30px 0;
+    grid-column: 1/-1;
+    text-align: center;
+    color: #fff;
+}
+
+.sobre_titulo h1 {
+    font-size: 2.5rem;
+    color:#ff4d05;
+    margin-bottom: 15px;
+    font-family: 'Poppins';
+}
+
+.sobre_titulo p {
+    color: #707070;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.sobre_titulo div {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.sobre_titulo span {
+    display: block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #ff4d05;
+}
+
+.sobre img {
+    animation: ladoSecao .5s ease-in-out forwards;
+    cursor: pointer;
+    grid-row: 2;
+    max-width: 100%;
+    border-radius: 4px;
+    filter: blur(0);
+}
+
+.sobre img:hover {
+    transition: .5s ease-in;
+    filter: blur(1px);
+}
+
+.sobre_conteudo {
+    animation: sobeSecao .6s ease-in-out forwards;
+    grid-column: 2/-1;
+    display: grid;
+    color: #707070;
+    grid-template-columns: 1fr 1fr;
+}
+
+.sobre_texto {
+    display: grid;
+    grid-column: 1/-1;
+    grid-template-columns: 1fr 1fr;
+}
+
+.sobre_texto h1 {
+    font-size: 2.3rem;
+    color: #fff;
+    grid-column: 1/-1;
+}
+
+.sobre_texto h1::after {
+    background-color: #ff4d05;
+    height: 6px;
+    width: 60px;
+    margin: 20px 0;
+    content: '';
+    display: block;
+    border-radius: 5px;
+}
+
+.sobre_texto p {
+    font-size: 1.3rem;
+    grid-row: 2;
+    grid-column: 1/-1;
+}
+
+.sobre_info {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1/-1;
+    gap: 15px;
+    align-items: center;
+}
+
+.sobre_info i {
+    color: #ff4d05;
+    display: inline-block;
+    padding-right: 15px;
+    font-size: 1.5rem;
+}
+
+.sobre_info p {
+    font-size: .9rem;
+}
+
+@keyframes sobeSecao {
+    from {
+        transition: .5s;
+        transform: translate3d(60px, 0, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes ladoSecao {
+    from {
+        transition: .5s;
+        transform: translate3d(-60px, 0, 0);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+
+/* EXPERIÊNCIAS */
+
+.my_resume{
+    color: white;
+}
+
+.resume_generica{
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 10px;
+    align-items: start;
+}
+
+.resume_generica h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    background-color: #ff4d05;
+    justify-self: center;
+    padding: 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.resume_generica h2 i {
+    margin-right: 10px;
+}
+
+.experience{
+    margin-bottom: 30px;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.education{
+    margin-bottom: 30px;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.experience_content ul {
+    color: #ff4d05;
+    gap: 10px;
+    display: flex;
+    cursor: pointer;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.resume_generica .experience_content div{
+    background-color: #222;
+    padding: 40px;
+    display: none;
+    animation: sideSection .5s ease-in-out forwards;
+    position: relative;
+}
+.resume_generica .experience_content div.active{
+    display: block;
+}
+
+.experience_content ul li.active {
+    color: #3e3d3d;
+}
+
+.resume_generica .experience_content div span{
+    color: #ff4d05;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.resume_generica .experience_content div h3{
+    font-family: 'Poppins', sans-serif;
+    margin: 10px 0;
+}
+
+.resume_generica .experience_content div p{
+    color: #707070;
+    font-size: 1.1rem;
+}
+
+/* Diplomas e Cursos */
+
+.resume_generica .education_content div{
+    background-color: #222;
+    padding: 40px;
+    display: none;
+    animation: sideSection .5s ease-in-out forwards;
+    position: relative;
+}
+.resume_generica .education_content div.active{
+    display: block;
+}
+
+.education_content ul li.active {
+    color: #3e3d3d;
+}
+
+
+.education_content ul {
+    color: #ff4d05;
+    gap: 10px;
+    display: flex;
+    cursor: pointer;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+
+
+.resume_generica .education_content div span{
+    color: #ff4d05;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    
+}
+
+.resume_generica .education_content div h3{
+    font-family: 'Poppins', sans-serif;
+    margin: 10px 0;
+}
+
+.resume_generica .education_content div p{
+    color: #707070;
+    font-size: 1.1rem;
+}
+
+.projects {
+    padding: 30px;
+    display: grid;
+    justify-content: center;
+    gap: 30px;
+    background-color: #151515;
+}
+
+.projects ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.projects_models ul li {
+    cursor: pointer;
+    font-family: 'Poppins';
+    background-color: #222;
+    border: 1px solid #333;
+    padding: 6px 20px;
+    color: #707070;
+}
+
+.projects_storage ul {
+    display: grid;
+    margin-top: 60px;
+    gap: 20px;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+..projects_storage ul li {
+    max-width: 100%;
+    height: 100%;
+}
+
+.projects_storage ul li img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.projects a {
+    background-color: #222;
+    text-decoration: none;
+    justify-self: center;
+    padding: 20px 40px;
+    border: 1px solid #333;
+    color: #707070;
+}
+
+
+/* FOOTER */
+footer {
+    background-color: #000000;
+    padding: 30px;
+}
+
+.footer_social {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    color: #f7f7f7;
+}
+
+.footer_social li {
+    background-color: #212020;
+    border-radius: 50%;
+    border: 1px solid #333;
+}
+
+.footer_social li i {
+    padding: 30px;
+    font-size: 1.5rem;
+    color: #f7f7f7;
+}
+
+.footer_social li:hover {
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    background-color: #3e3d3d;
+}
+
+.footer_social::before {
+    content: '';
+    height: 5px;
+    position: absolute;
+    width: 200px;
+    bottom: -30px;
+    background-color: #222;
+}
+
+footer .footer_comercial {
+    text-align: center;
+    color: #ffff;
+    margin: 90px auto;
+    font-size: 1.1rem;
+    font-family: 'Poppins';
+}
+
+
+/* RESPONSIVO */
+
+
+
+@media (max-width: 800px) {
+    body {
+        max-width: 100%;
+        margin: 0;
+    }
+  
+    header {
+        padding: 10px;
+    }
+  
+    header .navegacao-primaria {
+        display: none;
+    }
+  
+    header i {
+        color: #fff;
+        font-size: 2rem;
+    }
+  
+    header .navegacao-primaria.ativado {
+        background: linear-gradient(rgba(43, 42, 42, 0.176), rgba(46, 46, 46, 0.724));
+        position: absolute;
+        display: grid;
+        top: 80px;
+        color: white;
+        z-index: 5;
+        padding: 30px;
+        font-size: 1.6rem;
+        font-weight: bold;
+        border-radius: 0 0 4px 4px;
+        right: 5px;
+        animation: sobeSecao 0.6s ease-in-out forwards;
+    }
+  
+    .section-div img {
+        display: none;
+    }
+  
+    .section-div {
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+    }
+  
+    .sobre img {
+        grid-column: 1/-1;
+        justify-self: center;
+    }
+  
+    .sobre_conteudo {
+        grid-column: 1/-1;
+    }
+
+    .resume_generica, .experience_content, .education_content{
+        justify-self: center;
+        grid-column: 1/-1;
+    }
+    
+    .resume_generica .education {
+        grid-column: 1/-1;
+        grid-row: 3;
+        justify-self: center;
+        margin: 30px 0;
+    }
+
+    .resume_generica .experience {
+        grid-column: 1/-1;
+        grid-row: 1;
+        justify-self: center;        
+    }
+  
+    .projects_storage ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 638px) {
+    /* HEADER */
+    header {
+        padding: 10px 20px;
+    }
+  
+    header .navegacao-primaria {
+        display: none;
+    }
+  
+    header i {
+        font-size: 1.5rem;
+    }
+  
+    header .navegacao-primaria.ativado {
+        padding: 20px;
+        font-size: 1.2rem;
+    }
+  
+    .sobre img {
+        grid-column: 1/-1;
+    }
+  
+    .sobre_conteudo {
+        grid-column: 1/-1;
+    }
+  
+        /* EXPERIÊNCIAS */
+    .resume_generica {
+        grid-template-columns: 1fr;
+    }
+
+    .experience,
+    .education {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    
+
+    /* PRINCIPAL SOBRE MIM */
+    main .sobre {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre_titulo {
+        grid-column: 1/-1;
+    }
+
+    .sobre_conteudo {
+        grid-column: 1/-1;
+    }
+
+    .sobre_texto h1 {
+        font-size: 2rem;
+    }
+
+    .sobre_info i {
+        font-size: 1.2rem;
+    }
+
+    /* SEÇÃO DOWNLOAD CV */
+    .section-div {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px;
+    }
+
+    .section-div div {
+        margin-top: 0;
+    }
+
+    /* FOOTER */
+    footer .footer_comercial {
+        margin: 30px auto;
+        font-size: 1.2rem;
+    }
+}
